@@ -15,9 +15,11 @@
  */
 
 function coinFlip() {
-
+  let random = Math.floor(Math.random() * 2)
+  if (random) return "heads"
+  return "tails"
 }
-
+//console.log(coinFlip())
 /** Multiple coin flips
  * 
  * Write a function that accepts one parameter (number of flips) and returns an array of 
@@ -38,9 +40,14 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
+  const res = []
 
+  for (let i = 0; i < flips; i++)
+    res.push(coinFlip())
+
+  return res
 }
-
+//console.log(coinFlips(7))
 /** Count multiple flips
  * 
  * Write a function that accepts an array consisting of "heads" or "tails" 
@@ -55,9 +62,15 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-
+  let heads = 0
+  array.forEach(element => {
+    if (element === "heads")
+      heads+=1
+  });
+  let tails = array.length - heads
+  return {"heads": String(heads), "tails": String(tails)}
 }
-
+//console.log(countFlips(coinFlips(7)))
 /** Flip a coin!
  * 
  * Write a function that accepts one input parameter: a string either "heads" or "tails", flips a coin, and then records "win" or "lose". 
@@ -70,11 +83,16 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-
+  let res = coinFlip()
+  if (res === call)
+    return "win"
+  
+  return "lose"
 }
-
+//console.log(flipACoin("heads"))
 
 /** Export 
  * 
  * Export all of your named functions
 */
+export {coinFlip, coinFlips, countFlips, flipACoin};
