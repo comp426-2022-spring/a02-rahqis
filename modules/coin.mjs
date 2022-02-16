@@ -84,7 +84,7 @@ function countFlips(array) {
 
 function flipACoin(call) {
   let res = coinFlip()
-  if (res === call)
+  if (res.localeCompare(call)==0)
     return "win"
   
   return "lose"
