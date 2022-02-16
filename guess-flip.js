@@ -9,5 +9,7 @@ if (process.argv.length == 2) {
     console.log("Usage: node guess-flip --call=[heads|tails]")    
 } else {
     let call = process.argv[2].substring(7)
-    console.log(flipACoin(call))
+    if (call !== "heads" && call !== "tails")
+        console.log("Usage: node guess-flip --call=[heads|tails]") 
+    else console.log(flipACoin(call))
 }
