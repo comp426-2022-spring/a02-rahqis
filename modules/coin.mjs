@@ -89,7 +89,7 @@ function flipACoin(call) {
   
   return "lose"
 }
-//console.log(flipACoin("heads"))
+//xconsole.log(flipACoin("heads"))
 
 /** Export 
  * 

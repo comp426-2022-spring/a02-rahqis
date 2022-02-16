@@ -4,7 +4,7 @@ import { coinFlips, countFlips } from "./modules/coin.mjs";
 // Call the coinFlip function and put the return into STDOUT
 let res = []
 if (process.argv.length == 2) {
-    res = coinFlips(10)
+    res = coinFlips(1)
     console.log(res)
     console.log(countFlips(res))
     
