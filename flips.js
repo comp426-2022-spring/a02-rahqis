@@ -6,7 +6,7 @@ let res = []
 if (process.argv.length == 2) {
     res = coinFlips(1)
     console.log(res)
-    console.log(countFlips(res))
+    console.log({res: "1"})
     
 } else {
     let count = process.argv[2].substring(9)
