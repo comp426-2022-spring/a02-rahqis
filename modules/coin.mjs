@@ -68,7 +68,7 @@ function countFlips(array) {
       heads+=1
   });
   let tails = array.length - heads
-  return {"heads": String(heads), "tails": String(tails)}
+  return {"tails": String(tails), "heads": String(heads)}
 }
 //console.log(countFlips(coinFlips(7)))
 /** Flip a coin!
