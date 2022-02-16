@@ -12,6 +12,15 @@ if (process.argv.length == 2) {
     if (call !== "heads" && call !== "tails") {
         console.log("Error: no input.")
         console.log("Usage: node guess-flip --call=[heads|tails]")
+        
+    } else {
+        let res = flipACoin(call)
+        let actual = "" 
+        if (res === "win") {
+            actual = call
+        } else if (call==="heads") {
+            actual = "tails"
+        } else actual = "heads"
+        console.log({"call": call, "flip": actual, "result": res})
     }
-    else console.log(flipACoin(call))
 }
